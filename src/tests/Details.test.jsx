@@ -46,6 +46,7 @@ describe('Details component', () => {
 
     expect(getByText(recipeData.recipe.label)).toBeInTheDocument();
     expect(getByText('FULL RECIPE BELOW')).toBeInTheDocument();
+    expect(getByText('See full recipe')).toBeInTheDocument();
     expect(getByText('Ingredients')).toBeInTheDocument();
     expect(getByText(recipeData.recipe.ingredients[0].text)).toBeInTheDocument();
     expect(getByText('Nutrition')).toBeInTheDocument();

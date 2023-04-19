@@ -15,8 +15,6 @@ const Details = () => {
     dispatch(setLoading(false));
   }, [dispatch, id, recipes, recipe.label]);
 
-  console.log(recipe);
-
   if (isLoading) {
     return (
       <div className="loading">

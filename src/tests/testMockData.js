@@ -11,6 +11,7 @@ const recipeData = {
     {
       key: 'recipe_1',
       label: 'Fiadone',
+      url: 'https://www.edamam.com/recipe/fiadone-recipe-1',
       images: { SMALL: { url: 'https://www.edamam.com/web-i' } },
       ingredients: [{ foodId: '1', text: '1/2 cup sugar' }, { foodId: '2', text: '3 eggs' }],
       totalNutrients: [
@@ -29,6 +30,7 @@ const recipeData = {
     {
       key: 'recipe_2',
       label: 'Fish and Chips',
+      url: 'https://www.edamam.com/recipe/fiadone-recipe-1',
       images: { SMALL: { url: 'https://www.edamam.com/web-i' } },
       ingredients: [{ foodId: '1', text: '1 fish' }, { foodId: '2', text: '2 potatos' }],
       totalNutrients: [
@@ -48,6 +50,7 @@ const recipeData = {
   recipe: {
     key: 'recipe_1',
     label: 'Fiadone',
+    url: 'https://www.edamam.com/recipe/fiadone-recipe-1',
     images: { SMALL: { url: 'https://www.edamam.com/web-i' } },
     ingredients: [{ foodId: '1', text: '1/2 cup sugar' }, { foodId: '2', text: '3 eggs' }],
     totalNutrients: [
