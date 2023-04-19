@@ -78,7 +78,7 @@ section {
   height: 25px;
   width: 25px;
   transform: rotate(90deg);
-  position: absolute; 
+  position: absolute;
   top: 2%;
   right: 2%;
 }
@@ -91,7 +91,7 @@ section {
   padding: 0.25rem 1rem;
 }
 
-.text-group p{
+.text-group p {
   font-size: 1.25rem;
 }
 
@@ -118,7 +118,6 @@ section {
   margin-top: -3rem;
   font-size: 1.75rem;
 }
-
 
 .details {
   background-color: var(--dark);
