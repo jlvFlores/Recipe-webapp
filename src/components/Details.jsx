@@ -15,6 +15,8 @@ const Details = () => {
     dispatch(setLoading(false));
   }, [dispatch, id, recipes, recipe.label]);
 
+  console.log(recipe);
+
   if (isLoading) {
     return (
       <div className="loading">
@@ -25,18 +27,26 @@ const Details = () => {
 
   return (
     <div className="details">
-      <div className="header-cont">
-        <img src={recipe.images.SMALL.url} alt={recipe.label} />
-        <div>
-          <h4 className="recipe-name">{recipe.label}</h4>
-          <p className="ingredients-count">{recipe.ingredients.length}</p>
+      <div className="headline">
+        <img className="recipe-img" src={recipe.images.SMALL.url} alt={recipe.label} />
+        <div className="text-group">
+          <p>{recipe.label}</p>
+          <p>{recipe.ingredients.length}</p>
         </div>
       </div>
-      <div className="details-divider">FULL RECIPE BELOW</div>
+      <div className="divider">FULL RECIPE BELOW</div>
       <div className="recipe-cont">
-        <div className="recipe-ingredients">
-          <h3>Ingredients</h3>
-          {recipe.ingredients.map((ingredient) => <p key={ingredient.foodId}>{ingredient.text}</p>)}
+        <div>
+          <div className="recipe-div recipe-url">
+            <h3>
+              See full recipe
+              <a href={recipe.url}> HERE.</a>
+            </h3>
+          </div>
+          <div className="recipe-div recipe-ingredients">
+            <h3>Ingredients</h3>
+            {recipe.ingredients.map((ingred) => <p key={ingred.foodId}>{ingred.text}</p>)}
+          </div>
         </div>
         <div className="recipe-nutrition">
           <h3>Nutrition</h3>

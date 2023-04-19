@@ -12,8 +12,8 @@ const RecipeCard = ({
       </NavLink>
       <img className="recipe-img" src={image} alt={name} />
     </div>
-    <div className="name-cont">
-      <h4 className="recipe-name">{name}</h4>
+    <div className="text-group">
+      <p className="recipe-name">{name}</p>
       <p className="ingredients-count">{ingredientsCount}</p>
     </div>
   </div>
