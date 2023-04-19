@@ -5,10 +5,9 @@
 # Recipe webapp
 <b>Recipe webapp</b> is an [SPA](https://en.wikipedia.org/wiki/Single-page_application) that provides a wide library of recipes. The application will allow users to browse though vast recipe categories.
 
-<sup>This project recieves its data from [EDAMAM.com](https://www.edamam.com/). </sup>
+<sup>This project recieves its data from the [EDAMAM.com](https://www.edamam.com/) recipe API. </sup>
 
 </div>
-
 
 # 📗 Table of Contents
 
@@ -18,6 +17,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -64,6 +64,16 @@
 - Each recipeCard will have a button to view the recipe details.
 - Each details page will diplay the recipe's unique information.
 - Has working linters to encourage clean code.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Here is be the link to the demo project as well as a [link to a video](https://www.loom.com/share/16581853ab704d80bc2b4bae09b4fe73) of me explaining more in detail my webapp.
+
+- [Recipe web app](https://recipe-web-app-bbm9.onrender.com) was deployed with the use of render.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,6 +161,7 @@ npm run build
 > The following are the future features that will be added to the project.
 
 - [ ] **Will include a search feature**
+- [ ] **Adapt screen size for computer screens and other large screens**
 - [ ] **It will probably not take over the world**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
