@@ -10,7 +10,7 @@ const initialState = {
 
 export const getRecipesRequest = createAsyncThunk('recipes/getRecipesRequest', async () => {
   const search = '';
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${api.app_id}&app_key=${api.app_key}&diet=balanced&random=true`;
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${api.app_id}&app_key=${api.app_key}&diet=balanced`;
 
   try {
     const resp = await axios.get(url);
@@ -33,7 +33,13 @@ const recipesSlice = createSlice({
         const objArray = action.payload.hits.map((hit) => {
           const key = hit.recipe.uri;
           const removeText = 'http://www.edamam.com/ontologies/edamam.owl#';
-          return ({ ...hit.recipe, key: key.replace(removeText, '') });
+          const nutrientsArray = Object.values(hit.recipe.totalNutrients);
+          const nutrients = nutrientsArray.filter((nutrient) => nutrient.quantity !== 0);
+          return ({
+            ...hit.recipe,
+            key: key.replace(removeText, ''),
+            totalNutrients: nutrients,
+          });
         });
         return ({
           ...state,

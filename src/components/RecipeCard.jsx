@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import arrowCircle from '../assets/img/arrow-circle.svg';
 
 const RecipeCard = ({
-  id, name, image, ingredients,
+  id, name, image, ingredientsCount,
 }) => (
   <div className="card">
     <div className="image-cont">
@@ -14,7 +14,7 @@ const RecipeCard = ({
     </div>
     <div className="name-cont">
       <h4 className="recipe-name">{name}</h4>
-      <p className="ingredients-count">{ingredients.length}</p>
+      <p className="ingredients-count">{ingredientsCount}</p>
     </div>
   </div>
 );
@@ -23,7 +23,7 @@ RecipeCard.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  ingredients: PropTypes.instanceOf(Array).isRequired,
+  ingredientsCount: PropTypes.number.isRequired,
 };
 
 export default RecipeCard;

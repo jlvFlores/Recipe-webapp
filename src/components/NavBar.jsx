@@ -2,28 +2,31 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Outlet } from 'react-router-dom';
 import { getRecipesRequest } from '../redux/recipes/recipesSlice';
+import { setPage } from '../redux/details/detailsSlice';
 import leftArrow from '../assets/img/left-arrow.svg';
 import settingsGear from '../assets/img/settings-gear.svg';
 
 const NavBar = () => {
   const dispatch = useDispatch();
-  const { recipes } = useSelector((store) => store.recipes);
+  const { page } = useSelector((store) => store.details);
 
   useEffect(() => {
     dispatch(getRecipesRequest());
   }, [dispatch]);
 
-  useEffect(() => {
-    console.log(recipes);
-  }, [recipes]);
+  const handleClick = () => {
+    dispatch(setPage('Top 20 Balanced Recipes'));
+  };
 
   return (
     <>
       <header>
         <NavLink to="/">
-          <img className="icon" src={leftArrow} alt="left arrow" />
+          <button className="return-btn" onClick={handleClick} type="button">
+            <img className="icon" src={leftArrow} alt="left arrow" />
+          </button>
         </NavLink>
-        Header
+        {page}
         <img className="icon" src={settingsGear} alt="" />
       </header>
       <section>

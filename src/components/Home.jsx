@@ -6,11 +6,8 @@ const Home = () => {
 
   if (isLoading) {
     return (
-      <div className="home">
-        <div className="card">
-          Loading random recipes...
-          <div className="divider">Number of ingredients required</div>
-        </div>
+      <div className="loading">
+        <p>Loading recipes...</p>
       </div>
     );
   }
@@ -27,7 +24,7 @@ const Home = () => {
           id={recipe.key}
           name={recipe.label}
           image={recipe.images.SMALL.url}
-          ingredients={recipe.ingredients}
+          ingredientsCount={recipe.ingredientLines.length}
         />
       ))}
     </div>
