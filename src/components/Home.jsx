@@ -1,6 +1,5 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
-import Recipe from './Recipe';
+import RecipeCard from './RecipeCard';
 
 const Home = () => {
   const { recipes, isLoading } = useSelector((store) => store.recipes);
@@ -10,7 +9,7 @@ const Home = () => {
       <div className="home">
         <div className="card">
           Loading random recipes...
-          <div className="divider">Diets</div>
+          <div className="divider">Number of ingredients required</div>
         </div>
       </div>
     );
@@ -20,12 +19,14 @@ const Home = () => {
     <div className="home">
       <div className="card">
         You can search recipes by the type of diet that you prefer.
-        <div className="divider">Diets</div>
+        <div className="divider">Number of ingredients required</div>
       </div>
       {recipes.map((recipe) => (
-        <Recipe
+        <RecipeCard
           key={recipe.key}
+          id={recipe.key}
           name={recipe.label}
+          image={recipe.images.SMALL.url}
           ingredients={recipe.ingredients}
         />
       ))}
