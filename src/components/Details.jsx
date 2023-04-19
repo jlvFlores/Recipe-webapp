@@ -38,7 +38,7 @@ const Details = () => {
           <div className="recipe-div recipe-url">
             <h3>
               See full recipe
-              <a href={recipe.url}> HERE.</a>
+              <a href={recipe.url} target="_blank" rel="noreferrer noopener"> HERE.</a>
             </h3>
           </div>
           <div className="recipe-div recipe-ingredients">

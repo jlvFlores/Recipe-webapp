@@ -59,8 +59,10 @@
 
 > Description of some of the project's key features.
 
-- Home page that will display a list of categories.
-- Each category will display a fixed amout of recipes that fall under said category.
+- Home page that displays a list of recipes.
+- Each recipeCard will display an image, a name and a count of ingredients.
+- Each recipeCard will have a button to view the recipe details.
+- Each details page will diplay the recipe's unique information.
 - Has working linters to encourage clean code.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -148,7 +150,7 @@ npm run build
 
 > The following are the future features that will be added to the project.
 
-- [ ] **Unkwown yet**
+- [ ] **Will include a search feature**
 - [ ] **It will probably not take over the world**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
