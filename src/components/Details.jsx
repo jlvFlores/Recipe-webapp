@@ -29,7 +29,7 @@ const Details = () => {
         <img src={recipe.images.SMALL.url} alt={recipe.label} />
         <div>
           <h4 className="recipe-name">{recipe.label}</h4>
-          <p className="ingredients-count">{recipe.ingredientLines.length}</p>
+          <p className="ingredients-count">{recipe.ingredients.length}</p>
         </div>
       </div>
       <div className="details-divider">FULL RECIPE BELOW</div>

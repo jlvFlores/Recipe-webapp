@@ -27,7 +27,7 @@ const NavBar = () => {
           </button>
         </NavLink>
         {page}
-        <img className="icon" src={settingsGear} alt="" />
+        <img className="icon" src={settingsGear} alt="settings" />
       </header>
       <section>
         <Outlet />

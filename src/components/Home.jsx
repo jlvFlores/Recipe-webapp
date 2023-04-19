@@ -24,7 +24,7 @@ const Home = () => {
           id={recipe.key}
           name={recipe.label}
           image={recipe.images.SMALL.url}
-          ingredientsCount={recipe.ingredientLines.length}
+          ingredientsCount={recipe.ingredients.length}
         />
       ))}
     </div>
