@@ -37,6 +37,7 @@ describe('Home component and Children components', () => {
     useSelector.mockReturnValue({
       recipes: recipeData.recipes,
       isLoading: false,
+      search: '',
     });
 
     const { getByText, getByAltText } = render(
