@@ -36,7 +36,9 @@ describe('Details component', () => {
       isLoading: false,
     });
 
-    const { getByText } = render(
+    const recipe = recipeData.recipe;
+
+    const { getByText, getByAltText } = render(
       <Provider store={store}>
         <MemoryRouter>
           <Details />
@@ -44,12 +46,20 @@ describe('Details component', () => {
       </Provider>,
     );
 
-    expect(getByText(recipeData.recipe.label)).toBeInTheDocument();
-    expect(getByText('FULL RECIPE BELOW')).toBeInTheDocument();
+    expect(getByText(recipe.label)).toBeInTheDocument();
+    expect(getByAltText(recipe.label)).toBeInTheDocument();
+    expect(getByText(`${recipe.ingredients.length} ingredients`)).toBeInTheDocument();
     expect(getByText('See full recipe')).toBeInTheDocument();
+
+    expect(getByText('Calories')).toBeInTheDocument();
+    expect(getByText(`${recipe.calories.toFixed(2)} kcal`)).toBeInTheDocument();
     expect(getByText('Ingredients')).toBeInTheDocument();
-    expect(getByText(recipeData.recipe.ingredients[0].text)).toBeInTheDocument();
-    expect(getByText('Nutrition')).toBeInTheDocument();
-    expect(getByText(`Energy: ${recipeData.recipe.totalNutrients[0].quantity.toFixed(2)}${recipeData.recipe.totalNutrients[0].unit}`)).toBeInTheDocument();
+    expect(getByText(recipe.ingredients.length)).toBeInTheDocument();
+    expect(getByText('Total nutrients')).toBeInTheDocument();
+    expect(getByText(recipe.totalNutrients.length)).toBeInTheDocument();
+    expect(getByText('Diet labels')).toBeInTheDocument();
+    expect(getByText(recipe.dietLabels.length)).toBeInTheDocument();
+    expect(getByText('Health labels')).toBeInTheDocument();
+    expect(getByText(recipe.healthLabels.length)).toBeInTheDocument();
   });
 });

@@ -49,6 +49,9 @@ const recipeData = {
   ],
   recipe: {
     key: 'recipe_1',
+    calories: 196.30800000000002,
+    dietLabels: ['Low-Carb', 'Low-Fat', 'Low-Sodium'],
+    healthLabels: ['Sugar-Conscious', 'Peanut-Free', 'Tree-Nut-Free', 'Alcohol-Free', 'Immuno-Supportive'],
     label: 'Fiadone',
     url: 'https://www.edamam.com/recipe/fiadone-recipe-1',
     images: { SMALL: { url: 'https://www.edamam.com/web-i' } },
@@ -64,6 +67,16 @@ const recipeData = {
         quantity: 7.387,
         unit: 'kcal',
       },
+      {
+        label: 'Trans',
+        quantity: 0.02318,
+        unit: 'g'
+      },
+      {
+        label: 'Sugars',
+        quantity: 0.7143999999999999,
+        unit: 'g'
+      }
     ],
   },
 };
