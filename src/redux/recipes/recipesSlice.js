@@ -3,7 +3,7 @@ import axios from 'axios';
 import api from '../apiKeys.json';
 
 const initialState = {
-  recipes: [],
+  recipes: JSON.parse(localStorage.getItem('recipes')) || [],
   isLoading: true,
   error: null,
 };
@@ -41,6 +41,7 @@ const recipesSlice = createSlice({
             totalNutrients: nutrients,
           });
         });
+        localStorage.setItem('recipes', JSON.stringify(objArray));
         return ({
           ...state,
           recipes: objArray,
