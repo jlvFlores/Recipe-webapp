@@ -29,26 +29,33 @@ const Details = () => {
         <img className="recipe-img" src={recipe.images.SMALL.url} alt={recipe.label} />
         <div className="text-group">
           <p>{recipe.label}</p>
-          <p>{recipe.ingredients.length}</p>
+          <p>{`${recipe.ingredients.length} ingredients`}</p>
         </div>
       </div>
-      <div className="divider">FULL RECIPE BELOW</div>
+      <div className="divider">
+        See full recipe
+        <a href={recipe.url} target="_blank" rel="noreferrer noopener"> HERE.</a>
+      </div>
       <div className="recipe-cont">
-        <div>
-          <div className="recipe-div recipe-url">
-            <h3>
-              See full recipe
-              <a href={recipe.url} target="_blank" rel="noreferrer noopener"> HERE.</a>
-            </h3>
-          </div>
-          <div className="recipe-div recipe-ingredients">
-            <h3>Ingredients</h3>
-            {recipe.ingredients.map((ingred) => <p key={ingred.foodId}>{ingred.text}</p>)}
-          </div>
+        <div className="recipe-div">
+          <p>Calories</p>
+          <p>{`${recipe.calories.toFixed(2)} kcal`}</p>
         </div>
-        <div className="recipe-nutrition">
-          <h3>Nutrition</h3>
-          {recipe.totalNutrients.map((nutrient) => <p key={nutrient.label}>{`${nutrient.label}: ${nutrient.quantity.toFixed(2)}${nutrient.unit}`}</p>)}
+        <div className="recipe-div">
+          <p>Ingredients</p>
+          <p>{recipe.ingredients.length}</p>
+        </div>
+        <div className="recipe-div">
+          <p>Total nutrients</p>
+          <p>{recipe.totalNutrients.length}</p>
+        </div>
+        <div className="recipe-div">
+          <p>Diet labels</p>
+          <p>{recipe.dietLabels.length}</p>
+        </div>
+        <div className="recipe-div">
+          <p>Health labels</p>
+          <p>{recipe.healthLabels.length}</p>
         </div>
       </div>
     </div>
