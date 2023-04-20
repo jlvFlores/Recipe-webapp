@@ -70,13 +70,13 @@ const recipeData = {
       {
         label: 'Trans',
         quantity: 0.02318,
-        unit: 'g'
+        unit: 'g',
       },
       {
         label: 'Sugars',
         quantity: 0.7143999999999999,
-        unit: 'g'
-      }
+        unit: 'g',
+      },
     ],
   },
 };

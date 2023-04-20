@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { setLoading, setPage, setRecipe } from '../redux/details/detailsSlice';
+import { setLoading, setRecipe } from '../redux/details/detailsSlice';
+import { setPage, setIsSelected, setSearch } from '../redux/navbar/navbarSlice';
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,8 @@ const Details = () => {
   useEffect(() => {
     dispatch(setRecipe(recipes.find((recipe) => recipe.key === id)));
     dispatch(setPage(recipe.label));
+    dispatch(setIsSelected(false));
+    dispatch(setSearch(''));
     dispatch(setLoading(false));
   }, [dispatch, id, recipes, recipe.label]);
 

@@ -36,7 +36,7 @@ describe('Details component', () => {
       isLoading: false,
     });
 
-    const recipe = recipeData.recipe;
+    const { recipe } = recipeData;
 
     const { getByText, getByAltText } = render(
       <Provider store={store}>

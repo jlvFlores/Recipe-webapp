@@ -4,6 +4,7 @@ import recipeLogo from '../assets/img/recipe.svg';
 
 const Home = () => {
   const { recipes, isLoading } = useSelector((store) => store.recipes);
+  const { search } = useSelector((store) => store.navbar);
 
   if (isLoading) {
     return (
@@ -20,7 +21,7 @@ const Home = () => {
         <p className="headline-text">Here is a list of the 20 best recipes for you to enjoy</p>
       </div>
       <div className="divider">Number of ingredients required</div>
-      {recipes.map((recipe) => (
+      {recipes.filter((recipe) => (search.toLowerCase() === '' ? recipe : recipe.label.toLowerCase().includes(search))).map((recipe) => (
         <RecipeCard
           key={recipe.key}
           id={recipe.key}
